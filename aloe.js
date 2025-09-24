@@ -1,19 +1,29 @@
 const aloe = {
   "Aloe arborescens": {
+    image: "images/candelabra.png",
+    image2: "images/candelabra2.png",
+    image3: "images/candelabra3.png",
     commonNames: ["tree aloe", "candelabra aloe"],
     description: "A multi-stemmed, branching aloe with striking bright red-orange tubular flowers. Commonly grown as an ornamental plant, it is also used in traditional medicine for its soothing gel. This hardy aloe can survive harsh conditions and attracts birds and insects, especially sunbirds that feed on its nectar. It forms dense shrubs that provide shelter for small wildlife and thrives in rocky or well-drained soils, often planted in gardens for erosion control."
   },
   "Aloe bainesii": {
+    image: "images/bainesii.png",
+    image2: "images/bainesii2.png",
+    image3: "images/bainesii3.png",
     commonNames: ["tree aloe"],
     description: "One of the largest aloe species, capable of growing into a tree with a thick trunk and a spreading crown of branches. Its tall form can reach several meters and produces vivid red flowers that bloom in winter, providing a critical food source for sunbirds. This species is commonly found in dry woodland areas and rocky hillsides and is appreciated both for its dramatic presence in gardens and its traditional medicinal uses."
   },
   "Aloe vera var. barbadensis": {
     image: "images/barbadensis.png",
+    image2: "images/barbadensis2.png",
+    image3: "images/barbadensis3.png",
     commonNames: ["Aloe vera", "medicinal aloe"],
     description: "The most widely cultivated aloe species worldwide, known for its thick, fleshy leaves filled with soothing gel. Its gel is extensively used in skincare, minor burn treatments, and digestive remedies. Aloe vera thrives in warm, arid climates and requires well-drained soil. It produces yellow-green flowers on tall spikes, attracting pollinators such as bees and birds. Widely grown both indoors and outdoors, it is also used in commercial cosmetics and health products."
   },
   "Aloe vera var. chinensis": {
     image: "https://inaturalist-open-data.s3.amazonaws.com/photos/2908440/large.jpg",
+    image2: "images/chinensis2.png",
+    image3: "images/chinensis3.png",
     commonNames: [],
     description: "A compact, smaller variety of Aloe vera, often spotted when young and growing in clumps. It shares similar gel properties with the standard Aloe vera, though in smaller quantities, and is used in minor skin applications. Its orange flowers appear on short spikes and attract sunbirds and bees. This variety prefers warm, sunny locations with well-drained soil and is suitable for container cultivation or small gardens."
   },
@@ -86,6 +96,9 @@ const aloe = {
     description: "A medium-sized aloe with thick, spiny leaves and a striking rosette form. It produces tall spikes of red-orange flowers, attracting birds and insects. Native to South Africa, it grows in rocky, arid regions and tolerates full sun. Aloe aculeata is often cultivated for its dramatic appearance, providing architectural interest and biodiversity in gardens."
   },
   "Aloe barberae": {
+    image: "images/barberae.png",
+    image2: "images/barberae2.png",
+    image3: "images/barberae3.png",
     commonNames: ["tree aloe", "giant aloe"],
     description: "A massive tree-like aloe with thick, erect stems and rosettes of succulent leaves. Its dense flower spikes, usually orange or red, attract sunbirds. Native to South Africa, Aloe barberae can live for many decades and withstand drought. It is cultivated as an ornamental and provides shade and shelter in xeriscaped landscapes."
   },
