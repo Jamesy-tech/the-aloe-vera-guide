@@ -152,6 +152,12 @@ margin:0px;
         height:100px;
         }
 
+           .spacer1 {
+     flex:1;
+        display:block;
+        height:60px;
+        }
+
      .spacer2 {
      flex:1;
         display:block;
@@ -249,7 +255,31 @@ margin:0px;
             width:90%;
             }
         }
+
+        .one {
+            display: block;
+        }
     
+       @media (min-height:500px) {
+
+        .center-vertical {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 95vh;
+}
+
+.one {
+    display:none;
+}
+
+}
+
+.nav-button.active {
+  background: black !important;
+  color: white !important;
+}
+
 </style>
 </head>
 <body>
@@ -270,10 +300,10 @@ margin:0px;
 </div>
 
     <div class="center">
-        <button class="nav-button" onclick="showPage('home'); ">
+        <button class="nav-button navHome" onclick="showPage('home'); ">
            home
         </button>
-        <button class="nav-button" onclick="showPage('search-page', true);">aloe varieties</button> <!-- or "index" -->
+        <button class="nav-button navAloe" onclick="showPage('search-page', true);">aloe varieties</button> <!-- or "index" -->
         
     </div>
     
@@ -299,10 +329,12 @@ margin:0px;
         
         <div id="home" class="page">
 
-            
-        <div class="spacer"></div>
+            <div class="center-vertical">
+
+        <div class="spacer1 one"></div>
 
             <center>
+
             <span class="header">The Aloe Vera Guide</span>
 
             <br>
@@ -337,6 +369,8 @@ margin:0px;
                 
                 </center>
             
+                </div>
+
             </div>
         
         </div>
@@ -408,21 +442,28 @@ createAloePages();
 
 function showPage(id, clearSearch = false) {
 
-    document.getElementById("search").value = "";
-    
+  document.getElementById("search").value = "";
+
   document.querySelectorAll(".page").forEach(e => e.style.display = "none");
   document.getElementById(id).style.display = "block";
 
-  if (id === "search-page" && clearSearch) {
-    handleSearchInput(null, true);
-       document.getElementById("top-search").focus();
+  document.querySelectorAll(".nav-button").forEach(btn => btn.classList.remove("active"));
+
+  if (id === "home") {
+    document.querySelector(".navHome").classList.add("active");
+  } else if (id === "search-page") {
+    document.querySelector(".navAloe").classList.add("active");
   }
 
-    if (id === "home") {
-         document.getElementById("search").focus();
-    }
-}
+  if (id === "search-page" && clearSearch) {
+    handleSearchInput(null, true);
+    document.getElementById("top-search").focus();
+  }
 
+  if (id === "home") {
+    document.getElementById("search").focus();
+  }
+}
 
 
 function handleSearchInput(inputId, clearSearch = false) {
