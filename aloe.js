@@ -1,4 +1,4 @@
-const aloes = {
+const aloe = {
   "Aloe arborescens": {
     commonNames: ["tree aloe", "candelabra aloe"],
     description: "A multi-stemmed, branching aloe with striking bright red-orange tubular flowers. Commonly grown as an ornamental plant, it is also used in traditional medicine for its soothing gel. This hardy aloe can survive harsh conditions and attracts birds and insects, especially sunbirds that feed on its nectar. It forms dense shrubs that provide shelter for small wildlife and thrives in rocky or well-drained soils, often planted in gardens for erosion control."
@@ -135,4 +135,4 @@ const aloes = {
   }
 };
 
-window.aloes = aloes;
+window.aloe = aloe;
