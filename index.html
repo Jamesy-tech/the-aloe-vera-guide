@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="icon" href="icon.png">
+    <title>The Aloe Vera Guide | Everything you need to know about aloe</title>
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    
+<style>
+
+body {
+padding:0px;
+    width:100%;
+margin:0px;
+    padding-bottom:50px;
+    overflow-x:hidden;
+}
+
+    .main {
+        border:none;
+    border-top:solid whitesmoke 1px;
+        }
+
+    .top-nav {
+        flex:1;
+        border:none;
+        display:flex;
+        height:85px;
+        background:rgb(236, 255, 247);
+        }
+
+    .title-text-container {
+        display:block;
+        margin-top:7px;
+        cursor:pointer;
+        }
+
+    .title {
+        display:flex;
+        cursor:pointer;
+        }
+
+    .logo {
+        margin-right:20px;
+        height:85%;
+        margin-top:3%;
+        margin-left:20px;
+        cursor:pointer;
+        margin-bottom:5%;
+        
+    }
+
+    .top-title {
+       font-size:16px;
+        }
+
+    .center-title {
+        font-size:20px;
+        }
+    .bottom-title {
+        font-size:18px;
+        }
+
+    .top-title, .center-title, .bottom-title {
+            font-family:"Montserrat";
+        }
+
+    .top-search {
+        font-family:"Montserrat";
+        padding:15px;
+        outline:none;
+        border:none;
+        font-size:17px;
+        border-radius:12px;
+        padding-left:20px;
+        padding-right:20px;
+        margin-top:15px;
+        width:90%;
+        }
+
+  .right {
+    margin-left:auto;
+    border:none;
+      width:35%;
+      text-align:right;
+      padding-right:25px;
+    }
+
+    .center {
+        margin:auto;
+        }
+
+    .nav-button {
+        background:white;
+        border-radius:24px;
+        border:none;
+        padding:14px;
+        font-family:"Montserrat";
+        margin:4px;
+        margin-top:0px;
+        padding-left:25px;
+        padding-right:25px;
+        font-size:15px;
+        color:black;
+        transition:0.3s;
+        cursor:pointer;
+        }
+
+    .nav-button:hover {
+        background:black;
+        color:white;
+        }
+
+    .search {
+        
+      font-family:"Montserrat";
+        padding:15px;
+        outline:none;
+        border:none;
+        background:white;
+        font-size:17px;
+        margin-bottom:12px;
+        border-radius:12px;
+        padding-left:20px;
+        padding-right:15px;
+        margin-top:15px;
+        width:500px;
+        border:solid whitesmoke 1px;;
+
+        }
+
+    .search:focus {
+        border-color:#ddd;
+        }
+
+    .header {
+        font-size:30px;
+        }
+    
+    #home {
+        text-align:center;
+        flex:1;
+        display:block;
+        }
+
+    .spacer {
+     flex:1;
+        display:block;
+        height:100px;
+        }
+
+     .spacer2 {
+     flex:1;
+        display:block;
+        height:40px;
+        }
+
+    .card, .searchCard, .noResults {
+        width:500px;
+        border-radius:12px;
+        background:white;
+        border:solid whitesmoke 1px;
+        height:60px;
+        cursor:pointer;
+        padding:0px;
+        transition:0.3s;
+        margin-bottom:10px;
+        }
+
+    .card:hover, .searchCard:hover {
+        background:whitesmoke;
+        }
+
+    .searchCard, .noResults {
+        width:100% !important;
+        }
+
+    .noResults {
+        cursor:default;
+     }
+    
+    .card-text {
+        font-size:18px;
+        font-family:georgia;
+        margin-top:20px;
+        display:block;
+        }
+
+    .page {
+        display:none;
+        }
+
+       .aloe-page {
+        width:500px;
+        }
+    
+    .popular-pages-heading {
+        font-family:georgia;
+        width:500px;
+        text-align:left;
+        font-size:16px;
+        display:block;
+        padding:7px;
+        padding-bottom:10px;
+        padding-top:0px;
+        padding-left:15px;
+        border-bottom:solid whitesmoke 1px;
+        margin-bottom:10px;
+        }
+    
+    .popular-pages {
+        height:250px;
+        overflow:scroll;
+        }
+
+    #searchHeader {
+        width:90%;
+        text-align:left !important;
+        display:block;
+        margin-bottom:5px;
+        }
+
+    @media (max-width:800px) {
+        
+            .top-search {
+                display:none;
+                }
+
+        .center {
+            display:none;
+            }
+
+        .card {
+            width:90%;
+            }
+
+        .search {
+            width:90%;
+            }
+
+        .popular-pages-heading {
+            width:90%;
+            }
+
+        .aloe-page {
+            width:90%;
+            }
+        }
+    
+</style>
+</head>
+<body>
+
+<div class="top-nav">
+    
+<div class="title" onclick="showPage('home');">
+
+    <img class="logo" src="icon.png">
+
+    <div class="title-text-container">
+    <span class="top-title">the</span><br>
+    <span class="center-title">aloe vera</span><br>
+    <span class="bottom-title">guide</span>
+        
+    </div>
+
+</div>
+
+    <div class="center">
+        <button class="nav-button" onclick="showPage('home'); ">
+           home
+        </button>
+        <button class="nav-button" onclick="showPage('search-page', true);">aloe varieties</button> <!-- or "index" -->
+        
+    </div>
+    
+    <div class="right">
+            
+<input class="top-search" id="top-search" placeholder="search for aloe varieties" autocomplete="off">
+        
+    </div>
+
+</div>
+
+    <div class="main">
+
+        <div id="search-page" class="page">
+  <div class="spacer2"></div>
+  <center>
+    <span class="header" id="searchHeader">Search results for ""</span>
+    <br>
+    <div id="search-results" style="width:95%;"></div>
+  </center>
+</div>
+
+        
+        <div id="home" class="page">
+
+            
+        <div class="spacer"></div>
+
+            <center>
+            <span class="header">The Aloe Vera Guide</span>
+
+            <br>
+            
+        <input for="search" list="searchData" class="search" type="search" id="search" placeholder="search for aloe varieties" autocomplete="off">
+
+                <datalist id="searchData">
+                    <option>aloe vera var. barbadensis</option>
+                    <option>aloe vera var. chinensis</option>
+                    <option>aloe abornescens</option>
+                    <option>cameronii aloe</option>
+                    <option>aloe ferox</option>
+                </datalist>
+                
+                <div class="popular-pages-heading">popular pages</div>
+
+                <div class="popular-pages">
+          
+            <div class="card" onclick="showPage('aloe-vera-var.-barbadensis')">
+                <span class="card-text">aloe vera var. barbadensis</span>
+            </div>
+
+                     <div class="card" onclick="showPage('aloe-vera-var.-chinensis')">
+                <span class="card-text">aloe vera var. chinensis</span>
+            </div>
+
+                     <div class="card" onclick="showPage('aloe-arborescens')">
+                <span class="card-text">aloe abornescens</span>
+            </div>
+                    
+            </div>
+                
+                </center>
+            
+            </div>
+        
+        </div>
+
+    <script src="aloes.js"></script>
+
+<script>
+
+    const aloeData = window.aloes;
+
+function createAloePages() {
+  const main = document.querySelector(".main");
+
+  for (const [name, info] of Object.entries(aloeData)) {
+    const page = document.createElement("div");
+    page.className = "page";
+    page.id = name.replace(/\s+/g, "-").toLowerCase();
+
+    let imageHTML = "";
+    if (info.image) {
+      imageHTML = `
+        <br>
+        <img src="${info.image}" alt="${name}" style="width:250px; border-radius:12px; margin-top:15px;">
+        <br>
+      `;
+    } else {
+       imageHTML = `
+       <br>
+       <br>
+       <br>
+       `;
+        }
+
+    page.innerHTML = `
+      <center>
+      ${imageHTML}
+      <br>
+        <span class="header">${name}</span>
+        <br><br>
+        <div style="text-align:left; font-family:Georgia; font-size:17px;" class="aloe-page">
+          <strong>Common Names:</strong> ${info.commonNames.length ? info.commonNames.join(", ") : "None"}<br><br>
+          <strong>Description:</strong> ${info.description}
+        </div>
+      </center>
+    `;
+
+    main.appendChild(page);
+  }
+}
+
+    
+createAloePages();
+
+    
+    document.getElementById("search").focus();
+
+function showPage(id, clearSearch = false) {
+
+    document.getElementById("search").value = "";
+    
+  document.querySelectorAll(".page").forEach(e => e.style.display = "none");
+  document.getElementById(id).style.display = "block";
+
+  if (id === "search-page" && clearSearch) {
+    handleSearchInput(null, true);
+       document.getElementById("top-search").focus();
+  }
+
+    if (id === "home") {
+         document.getElementById("search").focus();
+    }
+}
+
+
+
+function handleSearchInput(inputId, clearSearch = false) {
+  const resultsContainer = document.getElementById("search-results");
+  resultsContainer.innerHTML = "";
+
+  let query = "";
+
+  if (!clearSearch && inputId) {
+    query = document.getElementById(inputId).value.toLowerCase();
+          document.getElementById("searchHeader").textContent = 'Search results for "' + query + '"';
+  } else {
+      document.getElementById("searchHeader").textContent = "Aloe & Aloe Vera";
+  }
+
+  let found = false;
+
+  for (const [name, info] of Object.entries(aloeData)) {
+    const nameMatch = name.toLowerCase().includes(query);
+    const commonMatch = info.commonNames.some(n => n.toLowerCase().includes(query));
+
+    if (nameMatch || commonMatch) {
+      const link = document.createElement("div");
+      link.className = "searchCard";
+      link.innerHTML = `<span class="card-text">${name}</span>`;
+      link.onclick = () => showPage(name.replace(/\s+/g, "-").toLowerCase());
+      resultsContainer.appendChild(link);
+      found = true;
+    }
+  }
+
+  if (!found) {
+    resultsContainer.innerHTML = "<div class='noResults'><span class='card-text'>No results found</span></div>";
+  }
+
+  showPage("search-page");
+}
+
+
+    ["search", "top-search"].forEach(id => {
+  document.getElementById(id).addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+      handleSearchInput(id);
+    }
+  });
+});
+
+    
+
+    showPage("home");
+
+</script>
+</body>
+</html>
