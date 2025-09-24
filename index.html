@@ -347,45 +347,58 @@ margin:0px;
 
     const aloeData = window.aloe;
 
-function createAloePages() {
+
+    function createAloePages() {
   const main = document.querySelector(".main");
+  const imageWidth = "250px";
+  const imageHeight = "300px";
 
   for (const [name, info] of Object.entries(aloeData)) {
     const page = document.createElement("div");
     page.className = "page";
     page.id = name.replace(/\s+/g, "-").toLowerCase();
 
-    let imageHTML = "";
+    let topImageHTML = "";
     if (info.image) {
-      imageHTML = `
+      topImageHTML = `
         <br>
-        <img src="${info.image}" alt="${name}" style="width:250px; border-radius:12px; margin-top:15px;">
+        <img src="${info.image}" alt="${name}" style="width:${imageWidth}; border-radius:12px; margin-top:15px;">
         <br>
       `;
     } else {
-       imageHTML = `
-       <br>
-       <br>
-       <br>
-       `;
-        }
+      topImageHTML = `
+        <br><br><br>
+      `;
+    }
+
+    let extraImagesHTML = "";
+    let i = 2;
+    while (info[`image${i}`]) {
+      extraImagesHTML += `
+        <img src="${info[`image${i}`]}" alt="${name}" style="height:${imageHeight}; width:auto; border-radius:12px; margin:10px;">
+      `;
+      i++;
+    }
 
     page.innerHTML = `
       <center>
-      ${imageHTML}
-      <br>
+        ${topImageHTML}
+        <br>
         <span class="header">${name}</span>
         <br><br>
-        <div style="text-align:left; font-family:Georgia; font-size:17px;" class="aloe-page">
+        <div style="text-align:left; font-family:Georgia; font-size:17px; max-width:500px; margin:auto;" class="aloe-page">
           <strong>Common Names:</strong> ${info.commonNames.length ? info.commonNames.join(", ") : "None"}<br><br>
           <strong>Description:</strong> ${info.description}
         </div>
       </center>
+      ${extraImagesHTML ? `<br><div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px; width:100%;">${extraImagesHTML}</div>` : ""}
     `;
 
     main.appendChild(page);
   }
 }
+
+
 
     
 createAloePages();
