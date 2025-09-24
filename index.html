@@ -434,7 +434,14 @@ margin:0px;
         <br><br>
         <div style="text-align:left; font-family:Georgia; font-size:17px; max-width:500px; margin:auto;" class="aloe-page">
           <strong>Common Names:</strong> ${info.commonNames.length ? info.commonNames.join(", ") : "None"}<br><br>
-          <strong>Description:</strong> ${info.description}
+        <!--  <strong>Description:</strong> -->${info.description}
+       <br><br>
+        <strong>How to Grow ${name}</strong><br><br>
+       ${info.howToGrow}
+       <br><br>
+       <strong>Common Problems</strong>
+       <br><br>
+       ${info.commonProblems}
         </div>
       </center>
       ${extraImagesHTML ? `<br><div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px; width:100%;">${extraImagesHTML}</div>` : ""}
