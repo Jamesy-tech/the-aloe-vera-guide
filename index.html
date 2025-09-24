@@ -262,22 +262,32 @@ margin:0px;
     
        @media (min-height:500px) {
 
-        .center-vertical {
+   /*     .center-vertical {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 95vh;
-}
+} */
 
-.one {
+/* .one {
     display:none;
 }
-
+ */
 }
 
 .nav-button.active {
   background: black !important;
   color: white !important;
+}
+
+.br1 {
+  display:none
+}
+
+@media (min-height:677px) {
+  .br1 {
+    display:block;
+  }
 }
 
 </style>
@@ -325,14 +335,15 @@ margin:0px;
     <div id="search-results" style="width:95%;"></div>
   </center>
 </div>
-
-          <div class="center-vertical">
             
-        <div id="home" class="page">
+        <div id="home" class="page"> 
 
-          
+                    <div class="center-vertical">
 
-        <div class="spacer1 one"></div>
+       <div class="spacer1"></div>
+
+           <div class="spacer1 br1"></div>
+
 
             <center>
 
@@ -369,10 +380,10 @@ margin:0px;
             </div>
                 
                 </center>
+
+                </div>
             
                 </div>
-
-            </div>
         
         </div>
 
