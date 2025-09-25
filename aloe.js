@@ -150,7 +150,7 @@ const aloe = {
     image: "images/barberae.png",
     image2: "images/barberae2.png",
     image3: "images/barberae3.png",
-    commonNames: ["tree aloe", "giant aloe"],
+    commonNames: ["tree aloe", "giant aloe", "aloe bainesii"],
     description: "A massive tree-like aloe with thick, erect stems and rosettes of succulent leaves. Its dense flower spikes, usually orange or red, attract sunbirds. Native to South Africa, Aloe barberae can live for many decades and withstand drought. It is cultivated as an ornamental and provides shade and shelter in xeriscaped landscapes.",
     howToGrow: "Full sun, well-drained soil, drought-tolerant, allow space for growth.",
     commonProblems: "Root rot from overwatering; young plants are frost-sensitive; occasional pests include scale."
