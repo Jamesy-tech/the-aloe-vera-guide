@@ -37,12 +37,18 @@ const aloe = {
   },
   "Aloe cameronii": {
     commonNames: [],
+    image: "images/cameronii.png",
+    image2: "images/cameronii2.png",
+    image3: "images/cameronii3.png",
     description: "A visually striking aloe with coppery-red leaves when exposed to strong sunlight. It produces clusters of tubular orange flowers, which are highly attractive to nectar-feeding birds and insects. Aloe cameronii is drought-tolerant and thrives in rocky soils and elevated terrains. It is commonly grown for ornamental purposes, adding color and structure to xeriscaped gardens and rockeries, and is sometimes used in local medicinal practices.",
     howToGrow: "Full sun, rocky well-drained soil, drought-tolerant, can tolerate mild frost.",
     commonProblems: "Overwatering causes root rot; leaf discoloration in too much shade; pests include scale insects."
   },
   "Aloe ferox": {
     commonNames: ["bitter aloe", "cape aloe"],
+    image: "images/ferox.png",
+    image2: "images/ferox2.png",
+    image3: "images/ferox3.png",
     description: "A tall, single-stemmed aloe with thick, spiny leaves arranged in large rosettes. Dense, bright red flower spikes appear in late winter and early spring, attracting sunbirds and insects. The bitter sap of Aloe ferox is harvested for traditional medicine and commercial aloe extracts. Native to South Africa, it grows on rocky slopes and open velds, tolerates drought and poor soil, and is often planted in gardens for its impressive stature and ornamental flowers.",
     howToGrow: "Full sun, well-drained rocky soil, drought-tolerant, allow space for growth.",
     commonProblems: "Sensitive to overwatering; leaves can be damaged by frost; occasional mealybugs."
@@ -60,6 +66,9 @@ const aloe = {
     commonProblems: "Root rot from overwatering; leaf edges may burn in extreme sun; pests include mealybugs."
   },
   "Aloe polyphylla": {
+    image: "images/polyphylla.png",
+    image2: "images/polyphylla2.png",
+    image3: "images/polyphylla3.png",
     commonNames: ["spiral aloe"],
     description: "A rare and visually striking aloe native to the high mountains of Lesotho. Its leaves are arranged in a perfect spiral, either clockwise or counterclockwise, creating a captivating geometric pattern. It produces red tubular flowers in summer that attract sunbirds and other pollinators. Preferring cool, well-drained soil and rocky slopes, it is highly sought after by collectors and requires careful cultivation in gardens or containers.",
     howToGrow: "Cool, well-drained soil, partial sun, avoid waterlogging, protect from extreme heat.",
