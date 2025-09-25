@@ -203,7 +203,7 @@ margin:0px;
         width:500px;
         }
     
-    .popular-pages-heading {
+    .popular-pages-heading, .aloe-of-the-day-heading {
         font-family:georgia;
         width:500px;
         text-align:left;
@@ -216,9 +216,13 @@ margin:0px;
         border-bottom:solid #ddd 1px;
         margin-bottom:10px;
         }
+
+        .aloe-of-the-day-heading {
+          padding-top:3px;
+        }
     
     .popular-pages {
-        height:250px;
+        height:220px;
         overflow:scroll;
         }
 
@@ -373,11 +377,15 @@ margin:0px;
                 <span class="card-text">aloe vera var. chinensis</span>
             </div>
 
-                     <div class="card" onclick="showPage('aloe-arborescens')">
+              <div class="card" onclick="showPage('aloe-arborescens')">
                 <span class="card-text">aloe abornescens</span>
+              </div>
+
             </div>
-                    
-            </div>
+
+                <div class="aloe-of-the-day-heading">aloe of the day</div>
+
+                <div class="card aloe-of-the-day-card"></div>
                 
                 </center>
 
@@ -449,11 +457,32 @@ margin:0px;
     main.appendChild(page);
   }
 }
-
-
-
-    
+ 
 createAloePages();
+
+function getAloeOfTheDay() {
+  const names = Object.keys(aloeData);
+
+  const now = new Date();
+  const start = new Date(now.getFullYear(), 0, 0);
+  const diff = now - start;
+  const oneDay = 1000 * 60 * 60 * 24;
+  const dayOfYear = Math.floor(diff / oneDay);
+
+  const index = dayOfYear % names.length;
+  return names[index];
+}
+
+function showAloeOfTheDay() {
+  const name = getAloeOfTheDay();
+  const aloeCard = document.querySelector(".aloe-of-the-day-card");
+
+  aloeCard.innerHTML = `<span class="card-text">${name}</span>`;
+  aloeCard.onclick = () => showPage(name.replace(/\s+/g, "-").toLowerCase());
+}
+
+getAloeOfTheDay()
+showAloeOfTheDay()
 
     
     document.getElementById("search").focus();
