@@ -8,7 +8,7 @@ const aloe = {
     howToGrow: "Full sun to partial shade, well-drained soil, drought-tolerant, protect from frost.",
     commonProblems: "Overwatering can cause root rot; may attract mealybugs or aphids."
   },
-  "Aloe bainesii": {
+ /* "Aloe bainesii": {
     image: "images/bainesii.png",
     image2: "images/bainesii2.png",
     image3: "images/bainesii3.png",
@@ -16,7 +16,7 @@ const aloe = {
     description: "One of the largest aloe species, capable of growing into a tree with a thick trunk and a spreading crown of branches. Its tall form can reach several meters and produces vivid red flowers that bloom in winter, providing a critical food source for sunbirds. This species is commonly found in dry woodland areas and rocky hillsides and is appreciated both for its dramatic presence in gardens and its traditional medicinal uses.",
     howToGrow: "Plant in full sun, well-drained rocky soil, drought-tolerant, protect seedlings from frost.",
     commonProblems: "Susceptible to root rot if overwatered; leaf spots in humid areas; occasional pests include scale."
-  },
+  }, */
   "Aloe vera var. barbadensis": {
     image: "images/barbadensis.png",
     image2: "images/barbadensis2.png",
