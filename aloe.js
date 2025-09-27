@@ -27,7 +27,7 @@ const aloe = {
     commonProblems: "Overwatering causes root rot; pests include mealybugs, scale, and aphids; leaves may turn yellow in cold."
   },
   "Aloe vera var. chinensis": {
-    image: "https://inaturalist-open-data.s3.amazonaws.com/photos/2908440/large.jpg",
+    image: "images/chinensis.png",
     image2: "images/chinensis2.png",
     image3: "images/chinensis3.png",
     commonNames: [],
