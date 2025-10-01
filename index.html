@@ -138,8 +138,14 @@ margin:0px;
 
     .header {
         font-size:30px;
+        font-family: "Mulish";
         }
     
+
+        .description-page {
+          font-family:"Mulish";
+        }
+
     #home {
         text-align:center;
         flex:1;
@@ -190,7 +196,7 @@ margin:0px;
     
     .card-text {
         font-size:18px;
-        font-family:georgia;
+        font-family: "Mulish";
         margin-top:20px;
         display:block;
         }
@@ -204,7 +210,7 @@ margin:0px;
         }
     
     .popular-pages-heading, .aloe-of-the-day-heading {
-        font-family:georgia;
+        font-family: "Mulish";
         width:500px;
         text-align:left;
         font-size:16px;
@@ -370,15 +376,15 @@ margin:0px;
                 <div class="popular-pages">
           
             <div class="card" onclick="showPage('aloe-vera-var.-barbadensis')">
-                <span class="card-text">aloe vera var. barbadensis</span>
+                <span class="card-text">Aloe vera var. barbadensis</span>
             </div>
 
                      <div class="card" onclick="showPage('aloe-vera-var.-chinensis')">
-                <span class="card-text">aloe vera var. chinensis</span>
+                <span class="card-text">Aloe vera var. chinensis</span>
             </div>
 
               <div class="card" onclick="showPage('aloe-arborescens')">
-                <span class="card-text">aloe abornescens</span>
+                <span class="card-text">Aloe abornescens</span>
               </div>
 
             </div>
@@ -439,17 +445,20 @@ margin:0px;
         ${topImageHTML}
         <br>
         <span class="header">${name}</span>
-        <br><br>
-        <div style="text-align:left; font-family:Georgia; font-size:17px; max-width:500px; margin:auto;" class="aloe-page">
+
+        <div class="description-page">    
+
+        <br>
+        <div style="text-align:left; font-family: "Mulish"; font-size:17px; max-width:500px; margin:auto;" class="aloe-page">
           <strong>Common Names:</strong> ${info.commonNames.length ? info.commonNames.join(", ") : "None"}<br><br>
         <!--  <strong>Description:</strong> -->${info.description}
        <br><br>
-        <strong>How to Grow ${name}: </strong>
+    <strong>How to Grow ${name}: </strong>
        ${info.howToGrow}
        <br><br>
        <strong>Common Problems: </strong>
        ${info.commonProblems}
-        </div>
+        </div></div>
       </center>
       ${extraImagesHTML ? `<br><div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px; width:100%;">${extraImagesHTML}</div>` : ""}
     `;
