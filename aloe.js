@@ -17,7 +17,7 @@ const aloe = {
     howToGrow: "Plant in full sun, well-drained rocky soil, drought-tolerant, protect seedlings from frost.",
     commonProblems: "Susceptible to root rot if overwatered; leaf spots in humid areas; occasional pests include scale."
   }, */
-  "Aloe vera var. barbadensis": {
+  "Aloe vera var. barbadensis miller": {
     image: "images/barbadensis.png",
     image2: "images/barbadensis2.png",
     image3: "images/barbadensis3.png",
